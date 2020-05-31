@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System.Reflection;
 using System.Threading.Tasks;
 
 namespace cursoAspNetEfCoreAlura
 {
-	public class RelatorioDeLivros
+	public class RelatorioDeLivros : IRelatorioDeLivros
 	{
-		public CatalogoDeLivros CatalogoDeLivros { get; private set; }
-	
-		public RelatorioDeLivros(CatalogoDeLivros catalogoDeLivros)
+		public ICatalogoDeLivros CatalogoDeLivros { get; private set; }
+
+		public RelatorioDeLivros(ICatalogoDeLivros catalogoDeLivros)
 		{
 			CatalogoDeLivros = catalogoDeLivros;
 		}

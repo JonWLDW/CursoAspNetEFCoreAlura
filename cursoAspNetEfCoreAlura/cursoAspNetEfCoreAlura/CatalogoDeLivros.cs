@@ -2,7 +2,7 @@
 
 namespace cursoAspNetEfCoreAlura
 {
-	public class CatalogoDeLivros
+	public class CatalogoDeLivros : ICatalogoDeLivros
 	{
 		public List<Livro> RetornarLivros()
 		{

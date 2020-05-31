@@ -26,9 +26,10 @@ namespace cursoAspNetEfCoreAlura
 				app.UseDeveloperExceptionPage();
 			}
 
+			app.UseRouting();
+			
 			var catalogo = new CatalogoDeLivros();
 			var relatorio = new RelatorioDeLivros(catalogo);
-			app.UseRouting();
 
 			app.UseEndpoints(endpoints =>
 			{
