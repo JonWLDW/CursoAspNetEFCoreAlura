@@ -5,6 +5,8 @@
 /.vs
 /cursoAspNetEfCoreAlura/obj
 /cursoAspNetEfCoreAlura/bin
+/cursoAspNetEfCoreMvcAlura/bin
+cursoAspNetEfCoreMvcAlura/obj
 
 # Compiled source #
 ###################
