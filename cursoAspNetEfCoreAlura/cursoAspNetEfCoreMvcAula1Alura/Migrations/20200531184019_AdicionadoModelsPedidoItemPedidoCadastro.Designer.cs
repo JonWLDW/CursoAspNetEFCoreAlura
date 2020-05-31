@@ -11,9 +11,10 @@ using System;
 namespace CasaDoCodigo.Migrations
 {
     [DbContext(typeof(ContextoDeDados))]
-    partial class ContextoDeDadosModelSnapshot : ModelSnapshot
+    [Migration("20200531184019_AdicionadoModelsPedidoItemPedidoCadastro")]
+    partial class AdicionadoModelsPedidoItemPedidoCadastro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
