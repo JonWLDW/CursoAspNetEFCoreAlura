@@ -26,13 +26,23 @@ namespace cursoAspNetEfCoreAlura
 				app.UseDeveloperExceptionPage();
 			}
 
+			var livros = new List<Livro>
+			{
+				new Livro("001", "Quem Mexeu na Minha Query", 12.00M),
+				new Livro("002", "Fique Rico com C#", 30.99M),
+				new Livro("003", "Java Para Baixinhos", 25.99M)
+			};
+
 			app.UseRouting();
 
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapGet("/", async context =>
 				{
-					await context.Response.WriteAsync("Hello World!");
+					foreach (var livro in livros)
+					{
+						await context.Response.WriteAsync($"Código: {livro.Codigo}, nome: {livro.Nome}, valor: {livro.Preco:F2}.\r\n");
+					}
 				});
 			});
 		}
